@@ -1,0 +1,10 @@
+<template name="home">
+    <br>
+    <div class="container">
+        <div class="card-deck">
+            {{#each showData}}
+            {{>card postImageId=postImageId postTitle=postTitle userId=userId}}
+            {{/each}}
+        </div>
+    </div>
+</template>

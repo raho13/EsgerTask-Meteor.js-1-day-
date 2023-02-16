@@ -1,0 +1,19 @@
+<template name="card">
+    <div class="card" style="min-Width: 500px;max-Width:900px;margin-bottom: 40px;">
+        <img class="card-img-top" src="{{showImage}}" alt="Card image cap">
+        <div class="card-body">
+            <h1 class="card-title">{{postTitle}}</h1>
+            {{#unless isProfile}}
+            {{#each showUser}}
+            <p>by: {{username}}</p>
+            {{/each}}
+            {{/unless}}
+        </div>
+        {{#if isProfile}}
+        <button type="button" class=" on-btn-click btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">
+            Edit post
+        </button>
+        {{/if}}
+
+    </div>
+</template>
