@@ -9,7 +9,6 @@ Meteor.publishComposite('showPosts', function (query = {}, limit = 100, skip = 0
             {
                 find(post) {
                     if (post.postImageId) {
-                        console.log('post image data',post.postImageId)
                         return PostImageCol.find({ _id: post.postImageId }).cursor
                     }
                 } 

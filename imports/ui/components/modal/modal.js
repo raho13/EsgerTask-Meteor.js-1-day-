@@ -14,7 +14,6 @@ Template.modal.helpers({
         return this.clicked_item?.postTitle
     },
     Image: function () {
-
         if (this.clicked_item?.postImageId) {
             return PostImageCol.findOne({ _id: this.clicked_item?.postImageId }).link()
         }
